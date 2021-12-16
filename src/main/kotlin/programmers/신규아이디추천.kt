@@ -2,9 +2,8 @@ package programmers
 
 class Solution {
     fun solution(new_id: String): String {
-        val special = "-_.~!@#\\$%^&*()=+[{]}:?,<>/"
 
-        var recommendId = new_id.toLowerCase()
+        return new_id.toLowerCase()
             .filter { it.isLowerCase() || it.isDigit() || it == '-' || it == '_' || it == '.' }
             .let {
                 var tempId = it
@@ -32,7 +31,5 @@ class Solution {
                 }
                 tempId
             }
-
-        return recommendId
     }
 }
